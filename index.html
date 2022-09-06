@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="name">
+            <p>Excel Clone - Book1</p>
+        </div>
+    </div>
+
+
+    
+    <div class="menu-container">
+        <div class="excel-icon"></div>
+        
+
+         
+        <div class="font-style">
+            <div class="bold align"><i class="material-icons">format_bold</i></div>
+            <div class="italic align"><i class="material-icons">format_italic</i></div>
+            <div class="underline align"><i class="material-icons">format_underlined</i></div>
+        </div>
+
+        <div class="text-style">
+            <div class="dropdown">
+                <select id="fontStyleSelect">
+                    <option value="roboto" selected>Roboto</option>
+                    <option value="arial">Arial</option>
+                    <option value="rockwell">Rockwell</option>
+                    <option value="monospace">Monospace</option>
+                </select>
+                </div>
+        </div>
+
+        
+        <div class="font-style">
+            <div class="left-side align active-font-style"><i class="material-icons">format_align_left</i></div>
+            <div class="center-side align"><i class="material-icons">format_align_center</i></div>
+            <div class="right-side align"><i class="material-icons">format_align_right</i></div> 
+        </div>
+       
+
+        <div class="color-style">   
+            <div class="bucket-icon align"><i class="material-icons">format_color_text</i></div>
+            <div class="color-picker align"><input type="color" id="text-color"></div>
+        </div>
+
+
+        
+        <div class="color-style">
+
+            <div class="bucket-icon align"><i class="material-icons">format_paint</i></div>
+            <div class="text-color-picker align"><input type="color" name="" id="bg-color"></div>
+
+        </div>
+
+
+        
+        <div class="cell-border-style">
+            <div class="top-border align"><i class="material-icons">border_top</i></div>
+            <div class="right-border align"><i class="material-icons">border_right</i></div>
+            <div class="bottom-border align"><i class="material-icons">border_bottom</i></div>
+            <div class="left-border align"><i class="material-icons">border_left</i></div>
+            <div class="outer-border align"><i class="material-icons">border_outer</i></div>
+            <div class="print align" onClick="window.print()"><i class="material-icons">print</i></div>
+        </div>
+        
+  
+            
+        </div>     
+
+    </div>
+
+
+    <div class="address-container">
+        <input type="text" id="address" value="" disabled>
+        <div class="formula-name"></div>
+        <input type="text" id="formula">
+    </div>
+
+    
+    <div class="cell-container">
+        <div class="cell-inner">
+            <!-- Cells place -->
+        </div>
+    </div>
+    <div class="sheet-container">
+        <div class="add-sheet">
+            <i class="material-icons" class="add-sheet">add</i>
+        </div>
+        <div class="sheets-list">
+            <div class="sheet active-sheet" sheetid="0"><p>Sheet 1</p></div>
+        </div>
+    </div>
+    
+    <!-- <script src="Init.js"></script> -->
+    <script src="functions.js"></script>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

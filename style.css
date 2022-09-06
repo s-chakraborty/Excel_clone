@@ -1,0 +1,329 @@
+:root{
+    --border-color:rgb(219, 218, 218);
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif; 
+}
+
+
+/* Top Useless bar */
+.top-bar{
+    height: 4vh;
+    width: 100%;
+    text-align: center;
+    background-color:#0fb62b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Menu style */
+.menu-container{
+    height: 4.5vh;
+    width: 100%;
+    display: flex;
+}
+
+.excel-icon{
+    width: 3.5rem;
+    background-image: url("excelIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+
+
+
+.text-style{
+    display: flex;
+    width: 12rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.color-style{
+    display: flex;
+    width: 5.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.cell-border-style{
+    display: flex;
+    width: 20rem;
+    justify-content: space-around;;
+    align-items: center;
+}
+
+
+.font-style{
+    display: flex;
+    width: 12rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.font-style>div,.cell-border-style>div{
+    box-sizing: border-box;
+    width: 2rem;
+    text-align: center;
+    height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-style>div:hover ,.cell-border-style>div:hover{
+    cursor: pointer;
+    background-color: rgb(203, 204, 204);
+    border-radius: 4px;
+    opacity: 0.4;
+    
+}
+
+
+
+
+
+/* Change in color picker icon */
+input[type="color"] 
+{
+    border: 0;
+    width: 1.8rem;
+    margin-left: 0.4rem;
+}
+
+
+
+
+
+
+/* Address bar style */
+.address-container{
+    width: 100%;
+    height: 3.5vh;
+    display: flex;
+}
+
+
+#address{
+    max-width: 3vw;
+    height: 100%;
+    text-align: center;
+}
+
+.formula-name{
+    width: 6.9rem;
+    background: url(fx-sign.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f8f9fa; 
+    border: 0.1px solid rgb(200, 200, 200);
+
+}
+
+
+#formula{
+    text-align: left;
+    height: 100%;
+    flex:1;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    border: 0.1px solid rgb(200, 200, 200);
+}
+
+
+
+/* Main sheets style */
+
+
+.cell-container{
+    height: 84vh;
+    background-color: #ffffff;  
+    overflow-x: scroll;
+    overflow-y: scroll;
+    position: relative;
+    scrollbar-width: thin;
+    font-size: 13px;
+}
+
+/* Inner box  */
+.cell-inner{
+    min-width: 192vw;
+}
+
+/* Top alphabet div */
+.alphabet-container{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+/* Top left useless cell */
+.alpha-cells:nth-child(1)
+{
+    height: 1.5rem; 
+    width: 3rem;
+    background-color: rgb(233, 233, 233);
+    position: sticky;
+    top: 0px;
+    left: 0px;   
+}
+
+/* Alphabet cells */
+.alpha-cells{
+    height: 1.5rem;    
+    width: 7rem;
+    border-left:  0.1px solid var(--border-color);
+    border-bottom:  0.1px solid var(--border-color);
+    display: flex;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+}
+
+
+.alpha-cells>p{
+    padding: 0.3rem;
+    width: 100%;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+/* Cell row design */
+.cell-row{
+    display: flex;
+}
+
+
+/* Number cell design */
+.number-cell{
+    min-height: 1.4rem;     
+    width: 3rem;
+    background-color:#f8f9fa;
+    border:  0.1px solid var(--border-color);
+    position: sticky;
+    left: 0px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.number-cell>p{
+    padding: 0.3rem 0; 
+    width: 100%;
+    text-align: center;
+}
+
+/* Every cell design */
+.cell{ 
+    min-height: 1.4rem;     
+    width: 7rem;
+    border-left:  0.1px solid var(--border-color);
+    border-bottom:  0.1px solid var(--border-color);
+    outline: none;
+    cursor:cell;
+    box-sizing: border-box;
+    
+}
+
+
+/* Last sheet design */
+.sheet-container{
+    background-color: rgb(233, 233, 233);
+    min-width: 100%;
+    height: 3vh;
+    display: flex;
+}
+
+
+.add-sheet{
+    height: 100%;
+    width: 4rem;
+    text-align: center;
+    color:green;
+    border-left:  0.1px solid var(--border-color);
+    border-bottom:  0.1px solid var(--border-color);
+    cursor:default;
+}
+
+
+.sheets-list{
+    height: 100%;
+    flex: 1;
+    display: flex;
+}
+
+.sheet{
+    cursor: pointer;
+    border-left:  0.1px solid var(--border-color);
+    border-bottom:  0.1px solid var(--border-color);
+}
+
+
+.sheet>p{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.1rem 1rem;
+} 
+
+
+
+
+    /* Scrollbar design section */
+
+    .cell-container::-webkit-scrollbar-track
+    {
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .cell-container::-webkit-scrollbar
+    {
+        height: 11px;
+        width: 11px;
+        background-color: #F5F5F5;
+    }
+
+    .cell-container::-webkit-scrollbar-thumb
+    {
+        border-radius: 2px;
+        background-color: rgb(162, 162, 162);
+    }
+
+
+    /* All active css */
+    .active-sheet{
+        background-color: rgb(255, 255, 255);
+    }
+
+
+
+    .active-cell{
+        border:2.2px solid rgb(0, 180, 0);
+    }
+
+    .active-address{
+        background-color: rgb(225, 225, 222);
+    }
+
+    .active-font-style{
+        background-color: rgb(203, 204, 204);
+        border-radius: 4px;
+        opacity: 0.8;
+    }
